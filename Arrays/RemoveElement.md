@@ -10,20 +10,20 @@
 class Solution {
     public int removeElement(int[] nums, int val) {
 
-        int curr=0;
-        int last = nums.length-1;
-        while(curr<=last){O
+        int k = nums.length-1;
+        int curr = 0;
+        while(curr<=k){
             if(nums[curr]==val){
                 int temp = nums[curr];
-                nums[curr]=nums[last];
-                nums[last]=temp;
-                last--;
+                nums[curr] = nums[k];
+                nums[k] = temp;
+                k--;
             }
             else{
                 curr++;
             }
         }
-        return curr;
+        return k+1;
 
     }
 }
